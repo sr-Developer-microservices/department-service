@@ -19,15 +19,15 @@ public class DepartmentController {
     @Autowired
     private DepartmentService departmentService;
 
-    @PostMapping("/")
+    @PostMapping("/" )
     public Department saveDepartment(@RequestBody Department department){
-        log.info("In saveDepartment method of DepartmentController");
+//        log.info("In saveDepartment method of DepartmentController");
         return departmentService.saveDepartment(department);
     }
 
     @GetMapping("/{id}")
     public Department getDepartment(@PathVariable Long id){
-        log.info("In getDepartment method of DepartmentController");
+//        log.info("In getDepartment method of DepartmentController");
         return departmentService.getDepartment(id);
     }
 
