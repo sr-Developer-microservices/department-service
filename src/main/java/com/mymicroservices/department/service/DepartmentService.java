@@ -7,7 +7,10 @@ package com.mymicroservices.department.service;
 
 import com.mymicroservices.department.entity.Department;
 import com.mymicroservices.department.repository.DepartmentRepository;
+
 import lombok.extern.slf4j.Slf4j;
+
+//import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,12 +22,13 @@ public class DepartmentService {
     private DepartmentRepository departmentRepository;
 
     public Department saveDepartment(Department department) {
-        log.info("In saveDepartment method of DepartmentService");
+    	
+//        log.info("In saveDepartment method of DepartmentService");
         return departmentRepository.save(department);
     }
 
     public Department getDepartment(Long id) {
-        log.info("In getDepartment method of DepartmentService");
+//        log.info("In getDepartment method of DepartmentService");
         return departmentRepository.findByDepartmentId(id);
     }
 }
